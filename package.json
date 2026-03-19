@@ -1,0 +1,25 @@
+{
+  "name": "wedding",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server": "node server.js",
+    "dev:full": "concurrently \"npm run server\" \"npm run dev\"",
+    "start": "NODE_ENV=production node server.js",
+    "deploy": "vite build && npx gh-pages -d dist"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "vite": "^7.3.1"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.99.3",
+    "@tailwindcss/vite": "^4.1.18",
+    "express": "^5.2.1",
+    "tailwindcss": "^4.1.18"
+  }
+}

@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-slide-down: slideDown 0.6s ease-out forwards;
+
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+@font-face {
+  font-family: "Interstate Mono";
+  src: url("fonts/Interstate Mono Regular.ttf");
+}
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --off-white: #f7f7f5;
+  --light-grey: #ebebeb;
+  --mid-grey: #aaaaaa;
+  --dark-grey: #555555;
+  --mono: "Interstate Mono", monospace;
+  --script: "Cedarville Cursive", cursive;
+  --gutter: clamp(20px, 4vw, 60px);
+  --max: 1500px;
+}
+
+body {
+  font-family: var(--font-mono);
+}
